@@ -1,41 +1,35 @@
 const boton = document.querySelector("button");
+
 const mensaje = document.getElementById("mensaje");
 
+const musica = document.getElementById("musica");
+
 mensaje.style.display = "none";
+
+/* BOTON MENSAJE */
 
 boton.addEventListener("click", () => {
 
     if(mensaje.style.display === "none"){
 
         mensaje.style.display = "block";
+
         boton.textContent = "Cerrar mensaje 💌";
+
+        musica.play();
 
     }else{
 
         mensaje.style.display = "none";
+
         boton.textContent = "Abrir mensaje 💌";
 
+        musica.pause();
+
+        musica.currentTime = 0;
     }
 
 });
-
-const fotos = document.querySelectorAll(".carrusel img");
-
-let index = 0;
-
-setInterval(() => {
-
-    fotos[index].classList.remove("active");
-
-    index++;
-
-    if(index >= fotos.length){
-        index = 0;
-    }
-
-    fotos[index].classList.add("active");
-
-}, 4000);
 
 /* CONTADOR DIAS */
 
@@ -43,11 +37,10 @@ const contador = document.getElementById("contador");
 
 /*
 CAMBIA ESTA FECHA
-AQUI PONES TU FECHA DE NACIMIENTO
 año, mes-1, dia
 */
 
-const fechaInicio = new Date(2012, 7, 12);
+const fechaInicio = new Date(2008, 0, 1);
 
 function actualizarContador(){
 
@@ -60,7 +53,7 @@ function actualizarContador(){
     );
 
     contador.innerHTML =
-    `Gracias por ${dias.toLocaleString()} días siendo la mejor mamá `;
+    `Gracias por ${dias.toLocaleString()} días siendo la mejor mamá ❤️`;
 
 }
 
