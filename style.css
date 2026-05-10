@@ -44,6 +44,8 @@ body{
     box-shadow: 0 15px 40px rgba(0,0,0,0.22);
 
     animation: aparecer 1s ease;
+
+    z-index: 2;
 }
 
 /* ANIMACION ENTRADA */
@@ -91,6 +93,24 @@ p{
 
     text-shadow:
     0 0 6px rgba(0,0,0,0.4);
+}
+
+/* CONTADOR */
+
+#contador{
+
+    color: #fff0f3;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 22px;
+
+    font-weight: bold;
+
+    text-shadow:
+    0 0 8px rgba(0,0,0,0.4);
+
+    line-height: 1.6;
 }
 
 /* IMAGEN PRINCIPAL */
@@ -202,7 +222,7 @@ footer{
 
 footer p{
 
-    font-size: 1.15rem;
+    font-size: 1.2rem;
 
     font-weight: bold;
 
@@ -244,7 +264,7 @@ footer p{
     top: 0;
     left: 0;
 
-    z-index: -1;
+    z-index: 1;
 
     overflow: hidden;
 }
@@ -269,7 +289,7 @@ footer p{
     animation: flotar 8s ease-in-out infinite;
 }
 
-/* POSICIONES */
+/* POSICIONES PC */
 
 .fotos-fondo img:nth-child(1){
 
@@ -327,48 +347,60 @@ footer p{
 
     .fotos-fondo img{
 
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
 
-        opacity: 0.16;
+        opacity: 0.18;
+    }
+
+    /* POSICIONES CELULAR */
+
+    .fotos-fondo img:nth-child(1){
+
+        top: 4%;
+        left: -10px;
+    }
+
+    .fotos-fondo img:nth-child(2){
+
+        top: 4%;
+        right: -10px;
+    }
+
+    .fotos-fondo img:nth-child(3){
+
+        bottom: 4%;
+        left: -10px;
+    }
+
+    .fotos-fondo img:nth-child(4){
+
+        bottom: 4%;
+        right: -10px;
     }
 
     h1{
-        font-size: 2.1rem;
+        font-size: 2rem;
     }
 
     h2{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     p{
         font-size: 0.95rem;
     }
 
-    footer p{
+    #contador{
         font-size: 1rem;
+    }
+
+    footer p{
+        font-size: 1.1rem;
     }
 
     .carta{
         padding: 24px;
     }
 
-}
-
-/* CONTADOR */
-
-#contador{
-
-    color: #fff0f3;
-
-    font-size: 1.1rem;
-
-    margin-bottom: 22px;
-
-    font-weight: bold;
-
-    text-shadow:
-    0 0 8px rgba(0,0,0,0.4);
-
-    line-height: 1.6;
 }
